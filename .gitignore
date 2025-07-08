@@ -145,6 +145,7 @@ env.bak/
 venv.bak/
 data_src/
 .streamlit/
+/medibot.ipynb
 
 # Spyder project settings
 .spyderproject
