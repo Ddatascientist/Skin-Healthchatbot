@@ -11,6 +11,10 @@ st.set_page_config(
 
 st.markdown("""
 <style>
+body {
+    background-color: #FFF; /* Light blue */
+    }
+    
 .user-msg {
     background-color: #DCF8C6;
     color: #000;
@@ -21,7 +25,7 @@ st.markdown("""
     align-self: flex-end;
 }
 .bot-msg {
-    background-color: #F1F0F0;
+    background-color: #F1FAFA;
     color: #000;
     padding: 10px 15px;
     border-radius: 10px;
@@ -55,7 +59,7 @@ if msg := st.chat_input("Ask me any health or skin-beauty related question"):
     st.session_state.message.append({"role": "user", "content": msg})
     
     ai_res = llm_response(msg)
-    result = f"SM-BOT👩‍🔬 :\n{ai_res}"
+    result = f"👩‍🔬 {ai_res}"
     with st.chat_message("system"):
         st.markdown(result)
     st.session_state.message.append({"role": "system", "content": result})
